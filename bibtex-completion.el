@@ -1132,7 +1132,7 @@ defined.  Surrounding curly braces are stripped."
   (let ((value (cdr (assoc-string field entry 'case-fold))))
     (if value
         (replace-regexp-in-string
-         "\\(^[[:space:]]*[\"{][[:space:]]*\\)\\|\\([[:space:]]*[\"}][[:space:]]*$\\)"
+         "\\(^[[:space:]]*[\"][[:space:]]*\\)\\|\\([[:space:]]*[\"][[:space:]]*$\\)"
          ""
          (s-collapse-whitespace value))
       default)))
